@@ -2,7 +2,7 @@ import { BoxRenderable, MouseButton, MouseEvent, RGBA, TextAttributes } from "@o
 import { useRenderer } from "@opentui/solid"
 import { For, createMemo, createSignal, onCleanup, onMount, type JSX } from "solid-js"
 import { useTheme, tint } from "../context/theme"
-import { go, logo } from "../logo"
+import { go, logo, credits } from "../logo"
 
 export type LogoShape = {
   left: string[]
@@ -883,3 +883,8 @@ export function GoLogo() {
   const base = tint(theme.background, theme.text, 0.62)
   return <Logo shape={go} ink={base} idle />
 }
+
+export function Credits() {
+  return <Logo shape={credits} />
+}
+
